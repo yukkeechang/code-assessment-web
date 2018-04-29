@@ -10,7 +10,7 @@ const Product = ({ price, inventory, title }) => (
       {inventory ? `${inventory} remaining` : null}
     </div>
     <div className="col s6">
-    {price}
+    &#36;{price}
     </div>
    </div>
   </div>

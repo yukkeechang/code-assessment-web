@@ -1,5 +1,5 @@
 [
-  {"id": 1, "title": "Chronograph", "price": 500.01, "inventory": 2, "photo": "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400" },
+  {"id": 1, "title": "Chronograph", "price": 500.01, "inventory": 2, "photo": "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"},
   {"id": 2, "title": "Quartz", "price": 10.99, "inventory": 10, "photo":"https://images.pexels.com/photos/157627/watch-fashion-accessories-clothes-157627.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"},
   {"id": 3, "title": "Weekender", "price": 19.99, "inventory": 5, "photo": "https://images.pexels.com/photos/277390/pexels-photo-277390.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400"}
 ]

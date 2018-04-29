@@ -18,10 +18,10 @@ custom styles for cart!
 
 }
 
-
-
-
-
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+}
 
 /*---------------------------------------------------------------------- /
 custom styles for product list!
@@ -87,3 +87,25 @@ hr {
   outline: none;
   background-color: white;
 }
+
+
+/*---------------------------------------------------------------------- /
+custom style for images
+note: because we're mapping the product from an array, each item can't pull the image from the source
+------------------------------------------------------------------------ */
+/*.img-chrono {
+  max-width: 100%;
+  height: auto;
+  image: url('../../public/images/chronograph.png')
+
+  .img-quartz {
+    max-width: 100%;
+    height: auto;
+    image: url('../../public/images/chronograph.png')
+
+  .img-quartz {
+    max-width: 100%;
+    height: auto;
+    image: url('../../public/images/weekender.png')
+
+}*/
