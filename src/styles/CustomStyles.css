@@ -17,3 +17,25 @@ custom styles for cart!
 .checkout {
 
 }
+
+
+
+
+
+
+/*---------------------------------------------------------------------- /
+custom styles for product list!
+------------------------------------------------------------------------ */
+.card {
+  height: 230px;
+}
+
+button.add-to-cart {
+  border-radius: 25px;
+}
+
+.product-item-card {
+  margin-top: 25px;
+  border-radius: 8px;
+  overflow: hidden;
+}
