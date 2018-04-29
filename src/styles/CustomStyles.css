@@ -39,3 +39,51 @@ button.add-to-cart {
   border-radius: 8px;
   overflow: hidden;
 }
+
+
+/*---------------------------------------------------------------------- /
+custom styles for App and etc!
+------------------------------------------------------------------------ */
+
+body {
+  background: #F4F5F7;
+  color:#333;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #D8D8D8;
+}
+
+.logo-part {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 100px;
+}
+
+.logo-part h2 {
+  margin: 0;
+}
+
+.cart-part {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 100px;
+}
+
+.cart-link {
+  color:#333;
+  display: flex;
+}
+
+.cart-link i {
+  margin-right: 5px;
+}
+
+.modal {
+  box-shadow: none;
+  outline: none;
+  background-color: white;
+}

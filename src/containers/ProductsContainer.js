@@ -7,7 +7,7 @@ import ProductItem from '../components/ProductItem'
 import ProductsList from '../components/ProductsList'
 
 const ProductsContainer = ({ products, addToCart }) => (
-  <ProductsList title="Acme Store">
+  <ProductsList>
     {products.map(product =>
       <ProductItem
         key={product.id}
