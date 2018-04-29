@@ -1,0 +1,19 @@
+/*---------------------------------------------------------------------- /
+custom styles for cart!
+------------------------------------------------------------------------ */
+.empty-cart {
+  min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #999999;
+}
+
+.empty-cart i {
+  font-size: 80px;
+}
+
+.checkout {
+
+}
