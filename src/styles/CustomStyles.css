@@ -109,25 +109,20 @@ hr {
     border-radius: 0 !important;
   }
 
+/*small screen views */
+  @media (max-width: 600px) {
 
+  .logo-part {
+    justify-content: center;
+    height: 100px;
+  }
 
-/*---------------------------------------------------------------------- /
-custom style for images
-note: because we're mapping the product from an array, each item can't pull the image from the source
------------------------------------------------------------------------- */
-/*.img-chrono {
-  max-width: 100%;
-  height: auto;
-  image: url('../../public/images/chronograph.png')
+  .logo-part h2 {
+    font-size: 40px;
+  }
 
-  .img-quartz {
-    max-width: 100%;
-    height: auto;
-    image: url('../../public/images/chronograph.png')
-
-  .img-quartz {
-    max-width: 100%;
-    height: auto;
-    image: url('../../public/images/weekender.png')
-
-}*/
+  .cart-part {
+    justify-content: center;
+    height: 50px;
+  }
+}

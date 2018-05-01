@@ -10,12 +10,12 @@ class App extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col s6">
+          <div className="col s12 m6">
             <div className="logo-part">
               <h2>Acme Store</h2>
             </div>
           </div>
-          <div className="col s6">
+          <div className="col s12 m6">
             <div className="cart-part">
               <a className="cart-link default modal-trigger" href="#modal1" onClick={()=>{console.log("modal clicked")}}>
                 <i className="material-icons">shopping_cart</i>
@@ -30,10 +30,11 @@ class App extends Component {
 
         <div id="modal1" className="modal">
           <div className="modal-content">
-            <CartContainer />
+
+              <CartContainer />
+
           </div>
         </div>
-
       </div>
     )
   }

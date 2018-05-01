@@ -1,25 +1,26 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-//import '../styles/CustomStyles.css'
 
-const Product = ({ price, inventory, title }) => (
+
+const Product = ({ price, quantity, title }) => (
   <div>
-    <div className="row">
-    <div className="col s6">
-      <h5>{title} </h5>
-      <br />
-      {inventory ? `${inventory} remaining` : null}
+    <div className="product-details">
+      <div className="infos">
+        <h5>{title} </h5>
+      </div>
+      <div className="price">
+      ${price}
+      </div>
     </div>
-    <div className="col s6">
-    &#36;{price}
+    <div className="remaining">
+      <span>{quantity ? ` ${quantity} remaining` : null}</span>
     </div>
-   </div>
   </div>
 )
 
 Product.propTypes = {
   price: PropTypes.number,
-  inventory: PropTypes.number,
+  quantity: PropTypes.number,
   title: PropTypes.string
 }
 
