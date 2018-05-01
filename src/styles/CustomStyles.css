@@ -53,6 +53,70 @@ Product
  color: #999999;
 }
 
+/*---------------------------------------------------------------------- /
+Cart Product
+------------------------------------------------------------------------ */
+.cart-product {
+  display: flex;
+}
+
+.left-cart-product img {
+  margin-right: 10px;
+}
+
+.right-cart-product {
+  flex-grow: 1;
+}
+
+
+
+
+.product-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.btn-remove {
+  color: red;
+}
+
+.cart-actions {
+
+}
+
+.qty-update {
+  display: flex;
+}
+
+.btn-minus {
+  background-color: #eeeeee;
+  border-radius: 25px 0 0 25px;
+  width: 70px;
+}
+
+.input-qty {
+  width: 70px !important;
+  border: 1px solid #eeeeee !important;
+  margin: 0 !important;
+  padding: 0 4px !important;
+  outline: none !important;
+  box-shadow: none !important;
+  height: 34px !important;
+  text-align: center;
+}
+
+.input-qty:focus {
+
+}
+
+.btn-plus {
+  background-color: #eeeeee;
+  border-radius: 0 25px 25px 0;
+  width: 70px;
+}
+
 
 /*---------------------------------------------------------------------- /
 App and etc

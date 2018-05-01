@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Product from './Product'
+import CartProduct from './CartProduct'
 import '../styles/CustomStyles.css'
 
 const Cart  = ({ products, total, onCheckoutClicked }) => {
@@ -10,7 +10,7 @@ const Cart  = ({ products, total, onCheckoutClicked }) => {
     <div>
     {
     products.map(product =>
-      <Product
+      <CartProduct
         title={product.title}
         price={product.price}
         quantity={product.quantity}
