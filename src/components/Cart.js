@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Product from './Product'
+import '../styles/CustomStyles.css'
 
 const Cart  = ({ products, total, onCheckoutClicked }) => {
   const hasProducts = products.length > 0
@@ -36,14 +37,20 @@ const Cart  = ({ products, total, onCheckoutClicked }) => {
   )
 
   return (
+
     <div>
-      <h4>Your Cart</h4>
-      <div>{nodes}</div>
-      <p>Total: &#36;{total}</p>
-      <button onClick={onCheckoutClicked}
-        disabled={hasProducts ? '' : 'disabled'}>
-        Checkout
-      </button>
+      <div className="cart-header">
+        <h4>Your Cart</h4>
+        <a href="#!" className="modal-action modal-close btn-flat"><i className="material-icons">close</i></a>
+      </div>
+        <div>{nodes}</div>
+         {/*
+        <p>Total: &#36;{total}</p>
+        <button onClick={onCheckoutClicked}
+          disabled={hasProducts ? '' : 'disabled'}>
+          Checkout
+        </button>
+        */}
     </div>
   )
 }
