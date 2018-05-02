@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import CartProduct from './CartProduct'
 import '../styles/CustomStyles.css'
 
-const Cart  = ({ products, total, onCheckoutClicked }) => {
+const Cart  = ({ products, total, onCheckoutClicked, onRemoveItemClicked }) => {
   const hasProducts = products.length > 0
   //---if product exist then map array of products
   const nodes = hasProducts ? (
@@ -15,6 +15,7 @@ const Cart  = ({ products, total, onCheckoutClicked }) => {
         price={product.price}
         quantity={product.quantity}
         key={product.id}
+        onRemoveItemClicked={() => onRemoveItemClicked(product.id)}
       />
      )
     }
@@ -58,7 +59,8 @@ const Cart  = ({ products, total, onCheckoutClicked }) => {
 Cart.propTypes = {
   products: PropTypes.array,
   total: PropTypes.string,
-  onCheckoutClicked: PropTypes.func
+  onCheckoutClicked: PropTypes.func,
+  onRemoveItemClicked: PropTypes.func
 }
 
 export default Cart
