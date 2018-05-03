@@ -2,7 +2,9 @@ import {
   ADD_TO_CART,
   REMOVE_FROM_CART,
   CHECKOUT_REQUEST,
-  CHECKOUT_FAILURE
+  CHECKOUT_FAILURE,
+  INCREMENT,
+  DECREMENT
 } from '../constants/ActionTypes'
 
 const initialState = {
@@ -17,7 +19,7 @@ const addedIds = (state = initialState.addedIds, action) => {
         return state
       }
       return [ ...state, action.productId ]
-      case REMOVE_FROM_CART:
+    case REMOVE_FROM_CART:
 
       if (state.indexOf(action.productId) !== -1) {
         return state.filter((item) => action.productId !== item)
@@ -29,19 +31,31 @@ const addedIds = (state = initialState.addedIds, action) => {
 }
 
 const quantityById = (state = initialState.quantityById, action) => {
+
   const { productId } = action
+
   switch (action.type) {
     case ADD_TO_CART:
-      const { productId } = action
       return { ...state,
         [productId]: (state[productId] || 0) + 1
       }
+
     case REMOVE_FROM_CART:
 
-    let newState = Object.assign({}, state)
-    if(newState[productId]) delete newState[productId]
-    return { ...newState}
-    
+      let newState = Object.assign({}, state)
+      if(newState[productId]) delete newState[productId]
+      return { ...newState}
+
+    case INCREMENT:
+      return { ...state,
+        [productId]: (state[productId] || 0) + 1
+      }
+
+    case DECREMENT:
+      return { ...state,
+        [productId]: (state[productId] || 0) - 1
+      }
+
     default:
       return state
   }

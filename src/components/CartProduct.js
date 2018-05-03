@@ -4,14 +4,25 @@ import PropTypes from 'prop-types'
 import '../styles/CustomStyles.css'
 
 
-class CartProduct extends React.Component {
+  class CartProduct extends React.Component {
 
   onRemove = (e) => {
     e.preventDefault();
     this.props.onRemoveItemClicked();
   }
+
+  onDecrementQtyClicked = (e) => {
+    e.preventDefault();
+    this.props.onDecrementQtyClicked();
+  }
+
+  onIncrementQtyClicked = (e) => {
+    e.preventDefault();
+    this.props.onIncrementQtyClicked();
+  }
+
   render() {
-    const {price, title, photo} = this.props;
+    const { price, title, photo, quantity } = this.props;
     return (
       <div>
         <br />
@@ -29,35 +40,38 @@ class CartProduct extends React.Component {
                 {price}
               </div>
             </div>
-
             <div className="cart-actions">
-              <a className="btn-remove" href="" onClick={ (e) => this.onRemove(e)}>Remove</a>
+              <a className="btn-remove" href="" onClick={ (e) => this.onRemove(e) } >Remove</a>
             </div>
           </div>
         </div>
 
         <br />
         <div className="qty-update">
-          <button className=" z-depth-0 waves-effect waves-light  btn-flat btn-minus"  ><i className="material-icons">remove</i></button>
-          <input type="text" value={1} onChange={ () => {}} className="input-qty" />
-          <button className=" z-depth-0 waves-effect waves-light  btn-flat btn-plus"  ><i className="material-icons">add</i></button>
+          <button
+          onClick={ (e) => this.onDecrementQtyClicked(e) }
+          className=" z-depth-0 waves-effect waves-light  btn-flat btn-minus"  ><i className="material-icons">remove</i></button>
+          <input type="text" value={quantity } onChange={() => { }} className="input-qty" />
+          <button
+          onClick={ (e) => this.onIncrementQtyClicked(e) }
+          className=" z-depth-0 waves-effect waves-light  btn-flat btn-plus"  ><i className="material-icons">add</i></button>
           <br />
         </div>
         <br />
         <hr />
       </div>
-    )
+    );
   }
 }
-
 
 CartProduct.propTypes = {
   price: PropTypes.number,
   quantity: PropTypes.number,
   title: PropTypes.string,
   photo: PropTypes.string,
-  isCart: PropTypes.bool,
-  onRemoveItemClicked: PropTypes.func
+  onRemoveItemClicked: PropTypes.func,
+  onIncrementQtyClicked: PropTypes.func,
+  onDecrementQtyClicked: PropTypes.func
 }
 
 export default CartProduct

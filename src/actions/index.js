@@ -35,6 +35,24 @@ export const removeFromCart = productId => (dispatch, getState) => {
   }
 }
 
+export const incrementQty = productId => (dispatch, getState) => {
+  if (getState().products.byId[productId].inventory > 0) {
+    dispatch({
+      type: types.INCREMENT,
+      productId
+    });
+  }
+}
+
+export const decrementQty = productId => (dispatch, getState) => {
+  if (getState().cart.quantityById[productId] > 1) {
+    dispatch({
+      type: types.DECREMENT,
+      productId
+    });
+  }
+}
+
 export const checkout = products => (dispatch, getState) => {
   const { cart } = getState()
 

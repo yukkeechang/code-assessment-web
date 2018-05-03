@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 
-const Product = ({ price, quantity, title }) => (
+const Product = ({ price, quantity, title}) => (
   <div>
     <div className="product-details">
-      <div className="infos">
+      <div>
         <h5>{title} </h5>
       </div>
       <div className="price">
