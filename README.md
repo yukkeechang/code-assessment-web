@@ -1,5 +1,7 @@
 # Work & Co Web Code Assessment
 
+On branch "yukkee" show's how I implemented React JS, Redux, MaterialCSS to recreate the shopping cart for this take home assessment 
+
 This is a copy of the [Redux Shopping Cart Example](https://github.com/reactjs/redux/tree/master/examples/shopping-cart).
 
 To start a development server:
